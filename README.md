@@ -54,5 +54,5 @@ The **Self Improvement App** is designed to help users track their improvement b
 ### Data Privacy:
 - Each user's data is private, and behaviors and improvement items are only accessible to the logged-in user.
 
-### Visit my website at :
+
 
