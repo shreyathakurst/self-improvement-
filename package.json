@@ -1,0 +1,24 @@
+{
+  "name": "self-improvement-app",
+  "version": "1.0.0",
+  "description": "Self Improvement Application",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "nodemon server.js",
+    "build": "npm run build --prefix client"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
