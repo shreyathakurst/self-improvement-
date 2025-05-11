@@ -1,79 +1,58 @@
-Behavior Tracker Application
-Overview
-This application allows users to create, manage, and track behaviors and their associated improvement items (to-dos). The homepage displays the top 5 behaviors with the most improvement items, and users can manage their own behaviors and items after registering and logging in. The application is built with a modern frontend and backend, ensuring a seamless user experience with user-specific data handling.
+# Self Improvement App
 
-Note: This assignment is time-consuming and requires significant effort. Selection depends on the quality and completeness of submissions, as only a small number of candidates will be recruited. Please consider if you would like to proceed with this assignment.
+## Overview
 
-Application Purpose
+The **Self Improvement App** is designed to help users track their improvement behaviors and tasks (to-dos). Users can create, manage, and delete behaviors and improvement items. The app displays the 5 behaviors with the most improvement items on the homepage. This allows users to monitor and improve various aspects of their personal growth. 
 
-Primary Goal: Display the 5 behaviors with the most improvement items on the homepage.
-Functionality: Allow users to create, manage, and delete behaviors and their associated improvement items dynamically.
-User-Specific: Ensure users can only view and manage their own data after logging in.
+### Key Features:
+- Display top 5 behaviors with the most improvement items on the homepage.
+- Allow users to create, manage, and delete behaviors.
+- Manage improvement items (to-dos) associated with each behavior.
+- Users can register and log in to view and manage their own data.
+- Each user’s behaviors and improvement items are private to them.
 
-Features
-Frontend Requirements
-Homepage
+## Frontend
 
-Displays the top 5 behaviors with the most improvement items.
-Option to create new behaviors.
-Ability to delete behaviors and their associated improvement items.
-Select a behavior to view and manage its improvement items.
+### Technologies Used:
+- **Vite** for fast build and development.
+- **Tailwind CSS** for styling the app.
+  
+### Pages:
+1. **Homepage**:
+   - Displays the 5 behaviors with the most improvement items.
+   - Allows users to create new behaviors.
+   - Users can delete behaviors along with their associated improvement items.
+   - Users can select a behavior to view and manage its associated improvement items.
 
-Behavior Details Page
+2. **Behavior Details Page**:
+   - Lists all improvement items (to-dos) for a selected behavior.
+   - Users can add, edit, and delete items.
+   - Each behavior has a unique list of improvement items.
 
-Shows a list of improvement items (to-dos) for the selected behavior.
-Text box to add new improvement items.
-Edit or delete existing improvement items.
-Each behavior maintains a separate list of improvement items.
+### Design:
+- Use the provided screenshots as inspiration for layout and design.
+- Implement your own design flavor, keeping the user experience in mind.
 
-User-Specific Data
+## Backend
 
-Users must register and log in to access the application.
-Data (behaviors and improvement items) is private to the logged-in user.
+### Core APIs:
 
-Dynamic Behaviors
+1. **Behavior APIs**:
+   - `GET /api/behaviors/top`: Fetch the top 5 behaviors with the most improvement items for the homepage.
+   - `POST /api/behaviors`: Add a new behavior.
+   - `DELETE /api/behaviors/:id`: Delete an existing behavior, including its associated improvement items.
 
-Behaviors are user-defined and can be created, updated, or deleted dynamically.
+2. **Improvement Item (To-do) APIs**:
+   - `POST /api/behaviors/:id/items`: Add a new to-do under a behavior.
+   - `PUT /api/items/:id`: Edit an existing to-do.
+   - `DELETE /api/items/:id`: Delete an improvement item.
 
-Backend Requirements
-Core APIs
+3. **User Management APIs**:
+   - `POST /api/auth/register`: Register a new user.
+   - `POST /api/auth/login`: Log in an existing user.
 
-Fetch Top 5 Behaviors: API to retrieve the top 5 behaviors with the most improvement items for the homepage.
-Behavior Management:
-Add a new behavior.
-Delete an existing behavior (including associated improvement items).
+### Data Privacy:
+- Each user's data is private, and behaviors and improvement items are only accessible to the logged-in user.
 
+### Visit my website at :
 
-Improvement Item Management:
-Add a new to-do item for a behavior.
-Edit an existing to-do item.
-Delete a to-do item.
-
-
-User Management
-
-User registration and login functionality.
-Ensure behaviors and improvement items are tied to the logged-in user.
-
-Tech Stack
-
-Frontend:
-Vite: For fast development and optimized builds.
-React: For building the user interface with reusable components.
-Tailwind CSS: For styling the application with a utility-first approach.
-
-
-Backend:
-Node.js, Mongoose, Express
-
-
-Deployment:
-Hosted on Netlify: 
-
-Usage
-
-Register or log in to the application.
-On the homepage, view the top 5 behaviors with the most improvement items.
-Create a new behavior or select an existing one to manage its improvement items.
-Add, edit, or delete improvement items on the Behavior Details page.
-Delete behaviors as needed.
